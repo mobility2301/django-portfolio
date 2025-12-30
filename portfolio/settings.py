@@ -1,6 +1,7 @@
 
 
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -16,7 +17,7 @@ SECRET_KEY = 'django-insecure-mxyzew6^od4v0uj&v*ys2p_=-!0t7+i9z%u-++3+3$2*=hg_0z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['your-project-name.onrender.com', '127.0.0.1']
 
 
 # Application definition
@@ -108,8 +109,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
 
